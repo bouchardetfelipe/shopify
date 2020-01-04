@@ -1,0 +1,22 @@
+.header-wrapper {
+  position: fixed;
+  z-index: 1;
+  background-color: rgba({{ settings.color_body_bg }}, 0.0);
+  width: 100%;
+}
+.header-sticky .header-wrapper {
+  background-color: rgba({{ settings.color_body_bg }}, 1);
+  @include at-query($min, $medium) {
+  .logo img{
+    height: 60px;
+   }
+  }
+  .site-nav {
+      transition: all .3s ease, height .8s ease;
+   -webkit-transition: all .3s ease, height .8s ease;
+    -o-transition: all .3s ease, height .8s ease;
+    margin-top:0 !important;
+  }
+}
+.header-sticky .header-wrapper {
+}
